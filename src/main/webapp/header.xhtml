@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui">
+<body>
+<ui:composition>
+    <b:navBar brand="JSF Example" brandHref="#" fixed="top" inverse="true">
+        <b:navbarLinks>
+            <b:form>
+                <b:commandButton look="default" action="#{login.logout()}" value="Logout"></b:commandButton>
+            </b:form>
+        </b:navbarLinks>
+    </b:navBar>
+</ui:composition>
+</body>
+</html>

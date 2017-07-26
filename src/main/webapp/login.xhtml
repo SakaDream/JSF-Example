@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/html" xml:lang="en" lang="en"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Login - JSF Application</title>
+</h:head>
+<h:body style="padding: 60px; min-height: 2000px;">
+    <b:navBar brand="JSF Example" brandHref="#" fixed="top" inverse="true"></b:navBar>
+    <b:container>
+        <b:column colMd="4" offset="4">
+            <b:form id="loginForm">
+                <legend>Login</legend>
+                <b:inputText id="username" name="username" placeholder="Username" required="true" requiredMessage="Please Input Username!">
+                    <f:facet name="prepend">
+                        <b:icon name="user" />
+                    </f:facet>
+                </b:inputText>
+                <b:messages for="username"/>
+                <b:inputSecret id="password" name="password" placeholder="Password" required="true" requiredMessage="Please Input Password!">
+                    <f:facet name="prepend">
+                        <b:icon name="lock"/>
+                    </f:facet>
+                </b:inputSecret>
+                <b:messages for="password"/>
+                <b:commandButton look="primary" style="margin-right: 10px" action="#{login.login()}" value="Login"></b:commandButton>
+                <h:link outcome="home-guest" styleClass="btn btn-default" value="Login as guest"></h:link>
+                <b:message for="loginForm"/>
+            </b:form>
+        </b:column>
+    </b:container>
+</h:body>
+</html>

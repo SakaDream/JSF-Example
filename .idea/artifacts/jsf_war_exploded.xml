@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jsf:war exploded">
+    <output-path>$PROJECT_DIR$/target/jsf</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jsf" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:6.2.1.jre8" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.2.14" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-impl:2.2.14" />
+          <element id="library" level="project" name="Maven: net.bootsfaces:bootsfaces:1.1.2" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/jsf/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="jsf/web/Web" />
+    </root>
+  </artifact>
+</component>

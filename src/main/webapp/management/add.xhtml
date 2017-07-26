@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Add New Employee - JSF Application</title>
+</h:head>
+<h:body style="padding: 60px; min-height: 2000px;">
+    <b:navBar brand="JSF Example" brandHref="#" fixed="top" inverse="true">
+        <b:navbarLinks>
+            <b:form>
+                <b:commandButton look="default" action="#{login.logout()}" value="Logout"></b:commandButton>
+            </b:form>
+        </b:navbarLinks>
+    </b:navBar>
+    <b:container>
+        <b:form id="addForm">
+            <legend>Add New Employee</legend>
+            <b:inputText id="fullName" name="fullName" placeholder="Full Name" required="true" requiredMessage="Please input Full Name!">
+                <f:facet name="prepend">
+                    <b:icon name="user"/>
+                </f:facet>
+            </b:inputText>
+            <b:messages for="fullName"/>
+            <b:inputText id="address" name="address" placeholder="Address" required="true" requiredMessage="Please input Address!">
+                <f:facet name="prepend">
+                    <b:icon name="home"/>
+                </f:facet>
+            </b:inputText>
+            <b:messages for="address"/>
+            <b:inputText id="email" name="email" placeholder="Email" required="true" requiredMessage="Please input Email!">
+                <f:facet name="prepend">
+                    <b:icon name="inbox"/>
+                </f:facet>
+                <f:validator validatorId="com.sakadream.jsf.validator.EmailValidator"/>
+            </b:inputText>
+            <b:messages for="email"/>
+            <b:inputText id="phone" name="phone" placeholder="Phone" required="true" requiredMessage="Please input Phone!">
+                <f:facet name="prepend">
+                    <b:icon name="phone-alt"/>
+                </f:facet>
+                <f:validator validatorId="com.sakadream.jsf.validator.PhoneValidator"/>
+            </b:inputText>
+            <b:messages for="phone"/>
+            <b:inputText id="salary" name="salary" placeholder="Salary" required="true" requiredMessage="Please input Salary!">
+                <f:facet name="prepend">
+                    <b:icon name="usd"/>
+                </f:facet>
+                <f:validator validatorId="com.sakadream.jsf.validator.SalaryValidator"/>
+            </b:inputText>
+            <b:messages for="salary"/>
+            <b:commandButton look="primary" style="margin-right: 10px" action="#{emp.addEmployee()}" value="Add Employee"></b:commandButton>
+            <b:button look="default" outcome="home" value="Back to Home"></b:button>
+        </b:form>
+    </b:container>
+</h:body>
+</html>

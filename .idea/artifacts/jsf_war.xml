@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="jsf:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="jsf.war">
+      <element id="artifact" artifact-name="jsf:war exploded" />
+    </root>
+  </artifact>
+</component>
